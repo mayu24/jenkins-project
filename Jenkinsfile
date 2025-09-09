@@ -1,8 +1,8 @@
 pipeline {
-    any {
+    agent  {
         // We use a Docker agent with Maven and Google Cloud SDK pre-installed.
         // This ensures a clean and consistent build environment.
-        docker {
+        any {
             image 'gcr.io/cloud-builders/mvn:latest'
             args '--volume /var/jenkins_home/workspace/your-job-name/.m2:/root/.m2' // Cache Maven dependencies
         }

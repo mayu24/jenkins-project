@@ -1,5 +1,5 @@
 pipeline {
-    agent any {
+    any {
         // We use a Docker agent with Maven and Google Cloud SDK pre-installed.
         // This ensures a clean and consistent build environment.
         docker {
